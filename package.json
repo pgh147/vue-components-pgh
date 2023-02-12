@@ -1,0 +1,110 @@
+{
+  "name": "vue-components-pgh",
+  "version": "0.1.1",
+  "private": false,
+  "description": "简介",
+"author":"作者",
+"main": "lib/vue-components-pgh.umd.min.js",
+  "scripts": {
+    "start": "vue-cli-service serve --mode development",
+    "build": "vue-cli-service build --mode production",
+    "report": "vue-cli-service build --mode production --report",
+    "test": "vue-cli-service build --mode release",
+    "lint": "vue-cli-service lint",
+    "lint:es": "eslint --ext .js,.vue src",
+    "lint:css": "stylelint --fix \"src/**/*.{html,vue,css,sass,scss}\"",
+    "fix": "eslint src/**/*.*  --fix",
+    "components": "webpack --config webpack.component.js",
+    "coms": "vue-cli-service build --config webpack.component.js",
+    "lib": "vue-cli-service build --target lib --name vue-components-pgh --dest lib compliugn/index.js",
+    "lib-cal": "vue-cli-service build --target lib --name calendarcus --dest lib compliugn/calendarcus.js",
+    "lib-table": "vue-cli-service build --target lib --name tablecus --dest lib compliugn/tablecus.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-import": "^1.13.5",
+    "core-js": "^3.8.3",
+    "dingtalk-jsapi": "^2.8.33",
+    "echarts": "^5.3.3",
+    "element-ui": "^2.15.12",
+    "js-base64": "^3.7.2",
+    "sa-sdk-javascript": "^1.19.4",
+    "vant": "^2.10.3",
+    "vue": "^2.6.14",
+    "vue-axios": "^2.1.4",
+    "vue-router": "^3.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@commitlint/cli": "9.1.2",
+    "@commitlint/config-conventional": "9.1.2",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "4.5.0",
+    "@vue/cli-plugin-vuex": "4.5.0",
+    "@vue/cli-service": "~5.0.0",
+    "babel-plugin-component": "^1.1.1",
+    "cssnano": "^5.1.7",
+    "cssnano-preset-advanced": "^5.3.3",
+    "element-theme": "2.0.1",
+    "element-theme-chalk": "2.15.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "husky": "4.2.5",
+    "lint-staged": "^11.1.2",
+    "node-sass": "^4.14.1",
+    "postcss-aspect-ratio-mini": "^1.1.0",
+    "postcss-cssnext": "^3.1.1",
+    "postcss-import": "^14.1.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-url": "^10.1.3",
+    "postcss-viewport-units": "^0.1.6",
+    "postcss-write-svg": "^3.0.1",
+    "prettier": "^2.4.1",
+    "sass-loader": "^8.0.0",
+    "stylelint": "13.13.1",
+    "stylelint-config-standard": "22.0.0",
+    "stylelint-order": "4.1.0",
+    "stylelint-scss": "3.20.1",
+    "stylelint-webpack-plugin": "^3.0.1",
+    "svg-sprite-loader": "^6.0.9",
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "since 2019",
+    "not dead"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": "vue-cli-service lint"
+  }
+}
